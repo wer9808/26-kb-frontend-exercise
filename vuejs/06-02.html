@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <button :style="style1" @mouseover="overstyle" @mouseout="outstyle">
+        테스트
+      </button>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const vm = Vue.createApp({
+        data: () => ({
+          style1: {
+            backgroundColor: "aqua",
+            color: "black",
+          },
+        }),
+        methods: {
+          overstyle($event) {
+            this.style1 = {
+              backgroundColor: "purple",
+              color: "yellow",
+            };
+          },
+          outstyle($event) {
+            this.style1 = {
+              backgroundColor: "aqua",
+              color: "black",
+            };
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

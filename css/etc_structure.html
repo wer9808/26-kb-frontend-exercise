@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+      }
+      li {
+        float: left;
+        padding: 10px 15px;
+      }
+      li:nth-child(2n + 2) {
+        background-color: red;
+      }
+      li:nth-child(2n + 1) {
+        background-color: darkred;
+      }
+      li:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+      li:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1번째</li>
+      <li>2번째</li>
+      <li>3번째</li>
+      <li>4번째</li>
+      <li>5번째</li>
+      <li>6번째</li>
+      <li>7번째</li>
+      <li>8번째</li>
+    </ul>
+  </body>
+</html>

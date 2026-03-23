@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        position: relative;
+        width: 360px;
+        height: 100px;
+        border: 2px solid black;
+        overflow: hidden;
+      }
+      .box {
+        margin: 8px;
+        width: 100px;
+        height: 100px;
+      }
+      .box:nth-child(1) {
+        background-color: red;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: 100;
+      }
+      .box:nth-child(2) {
+        background-color: green;
+        position: absolute;
+        left: 40px;
+        top: 40px;
+        z-index: 10;
+      }
+      .box:nth-child(3) {
+        background-color: blue;
+        position: absolute;
+        left: 80px;
+        top: 80px;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit</h1>
+    <div id="container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor sit</h1>
+  </body>
+</html>

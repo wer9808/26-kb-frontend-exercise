@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .warning {
+        background-color: skyblue;
+        color: purple;
+      }
+      .warnimage {
+        display: inline-block;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div>1부터 100까지만 입력가능합니다.</div>
+      <div>
+        점수 :
+        <input :class="info" type="text" v-model="score" />
+        <span
+          class="warnimage"
+          v-if="info.warning"
+          title="1부터 100까지만 입력하세요"
+          >!</span
+        >
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const vm = Vue.createApp({
+        data: () => ({
+          score: 0,
+        }),
+        computed: {
+          info() {
+            return { warning: this.score <= 0 || this.score > 100 };
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>

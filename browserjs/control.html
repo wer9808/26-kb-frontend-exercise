@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = () => {
+        const body = document.body;
+        let content = "";
+
+        for (const idx of [...new Array(10)].keys()) {
+          content += `<h1>Header - ${idx}</h1>`;
+        }
+
+        // body.textContent = content;
+        body.innerHTML = content;
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
